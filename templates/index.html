@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8" />
+		<title>Kirmani Short Links</title>
+	</head>
+	<body>
+        <form action="{{ url_for('hello') }}" method="post">
+            <p>Short link: </p> {{ form.short_link }}
+            <p>URL: </p> {{ form.url }}
+            {{ form.csrf_token }}
+            <input type="submit">
+        </form>
+    </body>
+</html>
